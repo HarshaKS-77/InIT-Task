@@ -1,0 +1,36 @@
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+button {
+    width: 180px;
+    height: 40px;
+    border: 1px solid rgb(58, 132, 71);
+    border-radius: 4px;
+    background-color: rgb(58, 132, 71);
+    color: white;
+    font-size: medium;
+    align-self: center;
+    margin: 20px;
+
+}
+
+button:hover {
+    color: rgb(58, 132, 71);
+    background-color: white;
+    transition: 0.08s;
+}
+
+p {
+    text-align: center;
+}

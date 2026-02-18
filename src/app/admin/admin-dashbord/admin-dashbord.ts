@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import {MatIconModule} from '@angular/material/icon';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatButtonModule} from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+
+import { AdminHeader } from "../admin-header/admin-header";
+import { AdminSidebar } from "../admin-sidebar/admin-sidebar";
 
 @Component({
   selector: 'app-admin-dashbord',
-  imports: [MatButtonModule, MatDividerModule, MatIconModule],
+  imports: [AdminHeader, AdminSidebar, MatSidenavModule],
   templateUrl: './admin-dashbord.html',
   styleUrl: './admin-dashbord.css',
 })

@@ -1,0 +1,25 @@
+<div class="loginForm">
+    <h2>Register to continue</h2>
+    <!-- ReactiveFormsModule : 5) controll passes through Html page -->
+
+    <form [formGroup]="registerForm" action="">
+        <mat-form-field>
+            <mat-label>UserName</mat-label>
+            <input formControlName="username" matInput>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input formControlName="email" matInput>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input formControlName="password" type="password" matInput>
+        </mat-form-field>
+        
+        <button (click)="handleRegister()" type="button">Register</button>
+        <mat-divider></mat-divider>
+        <p>Already have an account ? please <a routerLink="">Login</a></p>
+
+    </form>
+
+</div>
