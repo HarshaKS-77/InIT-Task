@@ -35,6 +35,8 @@ export class Login {
       this.serviceApi.LoginAPI({ email, password }).subscribe({
         next: (res: any) => {
           console.log(res);
+          sessionStorage.setItem('userData',JSON.stringify(res.userData))
+          sessionStorage.setItem("token",res.token)
           alert(res.message)
           if (res.userData.role == 'admin') {
             this.router.navigateByUrl('/admin')
