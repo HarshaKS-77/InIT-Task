@@ -7,7 +7,8 @@ import { Injectable } from '@angular/core';
 export class Api {
 
   constructor(private http: HttpClient) { }
-  serverUrl: string = "http://localhost:3000"
+  // serverUrl: string = "http://localhost:3000"
+  serverUrl: string = "https://init-task-backend.onrender.com"
 
   // append token to header
   appendToken() {
