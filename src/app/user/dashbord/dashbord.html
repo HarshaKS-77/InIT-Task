@@ -3,39 +3,45 @@
   <mat-drawer mode="side" opened><app-users></app-users></mat-drawer>
 
   <mat-drawer-content>
+    @if (userData) {
     <div>
       <div class="header">
-        <h3>User name</h3>
-        <p>user122@gmail.com</p>
+        <h3>{{userData?.username}}</h3>
+        <p>{{userData?.email}}</p>
       </div>
       <div class="chat">
-        <p class="message sender">Hi</p>
-        <p class="message reciver">Hello</p>
-        <p class="message sender">Hi</p>
-        <p class="message reciver">Hello</p>
-        <p class="message sender">Hi</p>
-        <p class="message reciver">Hello</p>
-        <p class="message sender">Hi</p>
-        <p class="message reciver">Hello</p>
-        <p class="message sender">Hi</p>
-        <p class="message reciver">Hello</p>
-        <p class="message sender">Hi</p>
-        <p class="message reciver">Hello</p>
-        <p class="message sender">Hi</p>
-        <p class="message reciver">Hello</p>
-        <p class="message sender">Hi</p>
-        <p class="message reciver">Hello</p>
-        <p class="message sender">Hi</p>
-        <p class="message reciver">Hello</p>
-        <p class="message sender">Hi</p>
-        <p class="message reciver">Hello</p>
-        <p class="message sender">Hi</p>
-        <p class="message reciver">Hello</p>
+        @if (chat) {
+        @for (item of chat; track $index) {
+        @if (item.sender == sender) {
+        <p class="message sender">{{item.message}}</p>
+
+        }@else {
+        <p class="message reciver">{{item.message}}</p>
+
+        }
+
+        }
+
+
+        }
+        @else {
+        <p class="message reciver"> There is no chat..... </p>
+        }
       </div>
       <div class="text-box">
-        <input type="text" placeholder="Message" name="" id="">
-        <button>send</button>
+        <input [(ngModel)]="newMessage" type="text" placeholder="Message" name="" id="">
+        <button (click)="handleSendMessage()">send</button>
       </div>
     </div>
+    }@else {
+    <div>
+      <div style="height: 200px; text-align: center; display: flex; justify-content: center; margin: 30px;">
+        <h3>Start chat</h3>
+
+      </div>
+
+
+    </div>
+    }
   </mat-drawer-content>
 </mat-drawer-container>

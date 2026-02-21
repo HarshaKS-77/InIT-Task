@@ -1,9 +1,12 @@
 <div>
     @if (isLogin) {
+    @if (usersDetails) {
     @for (item of usersDetails; track $index) {
-    <p >{{item.username}}</p>
+    <p (click)="handleSelectUser(item)">{{item.username}}</p>
     <mat-divider></mat-divider>
     }
+    }
+
 
     }
     @else{
