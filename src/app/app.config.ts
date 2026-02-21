@@ -5,7 +5,8 @@ import { provideSocketIo, SocketIoConfig } from 'ngx-socket-io'
 import { routes } from './app.routes';
 import { provideHttpClient } from '@angular/common/http';
 const config: SocketIoConfig = {
-  url: 'http://localhost:3000',
+  // url: 'http://localhost:3000',
+  url: 'https://init-task-backend.onrender.com',
   options:{}
 }
 
