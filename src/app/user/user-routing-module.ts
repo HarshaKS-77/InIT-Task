@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { Dashbord } from './dashbord/dashbord';
-import { Chat } from './chat/chat';
-import { Inbox } from './inbox/inbox';
 import { Pnf } from '../pnf/pnf';
 
 const routes: Routes = [
@@ -10,12 +8,6 @@ const routes: Routes = [
 
   {
     path: '', component: Dashbord
-  },
-  {
-    path: 'chat', component: Chat
-  },
-  {
-    path: 'inbox', component: Inbox
   },
   {
     path: '**', component: Pnf
